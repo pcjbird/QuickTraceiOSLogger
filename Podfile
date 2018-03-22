@@ -9,5 +9,5 @@ target 'QuickTraceiOSLogger' do
   use_frameworks!
 
   # Pods for QuickTraceiOSLogger
-  pod 'GCDWebServer'
+  pod 'XLFacility'
 end
