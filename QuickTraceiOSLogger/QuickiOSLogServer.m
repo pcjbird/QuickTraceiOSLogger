@@ -10,7 +10,7 @@
 #import <XLFacility/XLFacility.h>
 #import <XLFacility/XLTelnetServerLogger.h>
 #import <XLFacility/XLHTTPServerLogger.h>
-
+#import <XLFacility/XLFacilityMacros.h>
 
 @interface QuickiOSLogServer ()
 
@@ -68,6 +68,7 @@ static QuickiOSLogServer *_sharedServer = nil;
     if (!_telnetServerLogger)
     {
         _telnetServerLogger = [[XLTelnetServerLogger alloc] init];
+        _telnetServerLogger.format = @"<td>%d %P[%p:%r] %m%c</td>";
     }
     return _telnetServerLogger;
 }
@@ -77,6 +78,7 @@ static QuickiOSLogServer *_sharedServer = nil;
     if (!_httpServerLogger)
     {
         _httpServerLogger = [[XLHTTPServerLogger alloc] initWithPort:8080];
+        _httpServerLogger.format = @"<td>%d %P[%p:%r] %m%c</td>";
     }
     return _httpServerLogger;
 }

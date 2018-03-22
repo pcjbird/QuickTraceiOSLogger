@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <XLFacility/XLFacilityMacros.h>
 
 @interface QuickiOSLogServer : NSObject
 
