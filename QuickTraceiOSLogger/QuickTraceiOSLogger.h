@@ -33,3 +33,8 @@ FOUNDATION_EXPORT const unsigned char QuickTraceiOSLoggerVersionString[];
 #if __has_include("QuickiOSLogServer.h")
 #import "QuickiOSLogServer.h"
 #endif
+
+
+#if __has_include("QuickiOSHttpServerLogger.h")
+#import "QuickiOSHttpServerLogger.h"
+#endif
