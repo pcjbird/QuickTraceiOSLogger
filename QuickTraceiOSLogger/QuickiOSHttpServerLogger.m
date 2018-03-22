@@ -11,7 +11,7 @@
 
 #import "QuickiOSHttpServerLogger.h"
 #import <XLFacility/XLFunctions.h>
-#import <XLFacility/XLFacilityPrivate.h>
+#import <XLFacility/XLFacilityMacros.h>
 
 #define APP_NAME ([[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"] ? [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"]:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])
 #define APP_VERSION ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
@@ -180,6 +180,7 @@
              kDefaultMinRefreshDelay];
             [string appendString:@"</head>"];
             [string appendString:@"<body>"];
+            [string appendFormat:@"<div style=\"padding-bottom: 9px;margin: 40px 0 20px;border-bottom: 1px solid #eee;text-align:center;\"><h1>%@ V%@ Build%@ 日志跟踪 (%s[%i])</h1></div>", APP_NAME, APP_VERSION, APP_BUILD, getprogname(), getpid()];
             [string appendString:@"<table><tbody id=\"content\">"];
             [self _appendLogRecordsToString:string afterAbsoluteTime:0.0];
             [string appendString:@"</tbody></table>"];
