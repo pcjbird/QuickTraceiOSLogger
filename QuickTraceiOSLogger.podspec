@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
     s.frameworks       = 'Foundation', 'UIKit'
 #s.preserve_paths   = ''
     s.source_files     = 'QuickTraceiOSLogger/*.{h,m}'
-    s.public_header_files = 'QuickTraceiOSLogger/QuickTraceiOSLogger.h', 'QuickTraceiOSLogger/QuickiOSLogServer.h'
+    s.public_header_files = 'QuickTraceiOSLogger/QuickTraceiOSLogger.h', 'QuickTraceiOSLogger/QuickiOSLogServer.h', 'QuickTraceiOSLogger/QuickiOSHttpServerLogger.h'
 
     s.dependency 'XLFacility'
 
