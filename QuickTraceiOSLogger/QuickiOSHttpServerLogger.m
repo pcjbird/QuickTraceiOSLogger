@@ -58,7 +58,7 @@
     CFHTTPMessageSetHeaderFieldValue(response, CFSTR("Date"), (__bridge CFStringRef)[[(XLHTTPServerLogger*)self.logger dateFormatterRFC822] stringFromDate:[NSDate date]]);
     if ([image isKindOfClass:[UIImage class]]) {
         NSData* htmlData = UIImagePNGRepresentation(image);
-        CFHTTPMessageSetHeaderFieldValue(response, CFSTR("Content-Type"), CFSTR("text/html; charset=utf-8"));
+        CFHTTPMessageSetHeaderFieldValue(response, CFSTR("Content-Type"), CFSTR("image/x-icon"));
         CFHTTPMessageSetHeaderFieldValue(response, CFSTR("Content-Length"), (__bridge CFStringRef)[NSString stringWithFormat:@"%lu", (unsigned long)htmlData.length]);
         CFHTTPMessageSetBody(response, (__bridge CFDataRef)htmlData);
     }
