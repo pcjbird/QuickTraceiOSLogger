@@ -12,6 +12,8 @@
 #import "QuickiOSHttpServerLogger.h"
 #import <XLFacility/XLFunctions.h>
 #import <XLFacility/XLFacilityMacros.h>
+#import <UIKit/UIKit.h>
+#import <YYWebImage/YYWebImage.h>
 
 #define APP_NAME ([[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"] ? [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"]:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])
 #define APP_VERSION ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
@@ -46,6 +48,32 @@
     if (_pollingSemaphore) {
         dispatch_semaphore_signal(_pollingSemaphore);
     }
+}
+
+- (BOOL)_writeHTTPResponseWithStatusCode:(NSInteger)statusCode image:(UIImage*)image {
+    BOOL success = NO;
+    CFHTTPMessageRef response = CFHTTPMessageCreateResponse(kCFAllocatorDefault, statusCode, NULL, kCFHTTPVersion1_1);
+    CFHTTPMessageSetHeaderFieldValue(response, CFSTR("Connection"), CFSTR("Close"));
+    CFHTTPMessageSetHeaderFieldValue(response, CFSTR("Server"), (__bridge CFStringRef)NSStringFromClass([self class]));
+    CFHTTPMessageSetHeaderFieldValue(response, CFSTR("Date"), (__bridge CFStringRef)[[(XLHTTPServerLogger*)self.logger dateFormatterRFC822] stringFromDate:[NSDate date]]);
+    if ([image isKindOfClass:[UIImage class]]) {
+        NSData* htmlData = UIImagePNGRepresentation(image);
+        CFHTTPMessageSetHeaderFieldValue(response, CFSTR("Content-Type"), CFSTR("text/html; charset=utf-8"));
+        CFHTTPMessageSetHeaderFieldValue(response, CFSTR("Content-Length"), (__bridge CFStringRef)[NSString stringWithFormat:@"%lu", (unsigned long)htmlData.length]);
+        CFHTTPMessageSetBody(response, (__bridge CFDataRef)htmlData);
+    }
+    NSData* data = CFBridgingRelease(CFHTTPMessageCopySerializedMessage(response));
+    if (data) {
+        [self writeDataAsynchronously:data
+                           completion:^(BOOL ok) {
+                               [self close];
+                           }];
+        success = YES;
+    } else {
+        XLOG_ERROR(@"Failed serializing HTTP response");
+    }
+    CFRelease(response);
+    return success;
 }
 
 - (BOOL)_writeHTTPResponseWithStatusCode:(NSInteger)statusCode htmlBody:(NSString*)htmlBody {
@@ -189,7 +217,20 @@
             [string appendString:@"</html>"];
             
             success = [self _writeHTTPResponseWithStatusCode:200 htmlBody:string];
-        } else if ([path isEqualToString:@"/log"] && [query hasPrefix:@"after="]) {
+        }
+        else if([path isEqualToString:@"/favicon.ico"]){
+            UIImage *icon = [UIImage imageNamed:@"AppIcon60x60"];
+            if([icon isKindOfClass:[UIImage class]])
+            {
+               success = [self _writeHTTPResponseWithStatusCode:200 image:[[icon yy_imageByResizeToSize:CGSizeMake(32.0f, 32.0f)] yy_imageByRoundCornerRadius:4.0f]];
+            }
+            else
+            {
+                XLOG_WARNING(@"Unsupported path in HTTP request: %@", path);
+                success = [self _writeHTTPResponseWithStatusCode:404 htmlBody:nil];
+            }
+        }
+        else if ([path isEqualToString:@"/log"] && [query hasPrefix:@"after="]) {
             NSMutableString* string = [[NSMutableString alloc] init];
             CFAbsoluteTime time = [[query substringFromIndex:6] doubleValue];
             
@@ -199,7 +240,8 @@
                 [self _appendLogRecordsToString:string afterAbsoluteTime:time];
                 success = [self _writeHTTPResponseWithStatusCode:200 htmlBody:string];
             }
-        } else {
+        }
+        else {
             XLOG_WARNING(@"Unsupported path in HTTP request: %@", path);
             success = [self _writeHTTPResponseWithStatusCode:404 htmlBody:nil];
         }

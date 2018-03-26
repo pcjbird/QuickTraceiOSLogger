@@ -10,4 +10,5 @@ target 'QuickTraceiOSLogger' do
 
   # Pods for QuickTraceiOSLogger
   pod 'XLFacility'
+  pod 'YYWebImage'
 end
