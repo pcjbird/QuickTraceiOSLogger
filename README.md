@@ -9,6 +9,16 @@
 # QuickTraceiOSLogger
 ### A real time iOS log trace tool, view iOS log with pc web browser under local area network, which will automatically scroll like xcode. 一个实时的iOS日志跟踪工具，在局域网中使用 PC Web 浏览器查看 iOS 日志，它将像xcode一样自动滚动。
 
+## 特性 / Features
+
+1. 一边操作一边查看输出日志，实时日志跟踪，无须手动刷新。
+2. 适用所有浏览器，无需配备 Mac 电脑。
+3. 无需数据线连接电脑。
+4. 支持多台电脑同时监听日志，支持多种日志跟踪方式，例如 telnet 等。
+
+## 演示 / Demo
+
+<p align="center"><img src="demo.jpg" title="demo"></p>
 
 ##  安装 / Installation
 
@@ -17,6 +27,19 @@
 ```
 pod 'QuickTraceiOSLogger'
 ```
+
+## 使用 / Usage
+  
+  ```
+  #import <QuickTraceiOSLogger/QuickTraceiOSLogger.h>
+  
+  - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  // Override point for customization after application launch.
+  [QuickiOSLogServer start];
+  XLOG_INFO(@"您正在使用 iOS 远程日志查看服务！");
+  return YES;
+  }
+  ```
 
 
 ## 关注我们 / Follow us

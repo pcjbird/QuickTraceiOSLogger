@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		892E6542206B2C1800F83A84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E6541206B2C1800F83A84 /* AppDelegate.m */; };
+		892E6545206B2C1800F83A84 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E6544206B2C1800F83A84 /* ViewController.m */; };
+		892E6548206B2C1800F83A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892E6546206B2C1800F83A84 /* Main.storyboard */; };
+		892E654A206B2C1800F83A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 892E6549206B2C1800F83A84 /* Assets.xcassets */; };
+		892E654D206B2C1800F83A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892E654B206B2C1800F83A84 /* LaunchScreen.storyboard */; };
+		892E6550206B2C1800F83A84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E654F206B2C1800F83A84 /* main.m */; };
+		892E6557206B30CA00F83A84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 892E6556206B30CA00F83A84 /* InfoPlist.strings */; };
+		B69E736EB7EA415657B5E929 /* Pods_QuickTraceiOSLoggerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3F5DA30BFF7790E7F01252 /* Pods_QuickTraceiOSLoggerDemo.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0CC6614BA557EB7441B23633 /* Pods-QuickTraceiOSLoggerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickTraceiOSLoggerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		3092554B0CC2E957EAA29E4D /* Pods-QuickTraceiOSLoggerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickTraceiOSLoggerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		3E3F5DA30BFF7790E7F01252 /* Pods_QuickTraceiOSLoggerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickTraceiOSLoggerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		892E653D206B2C1800F83A84 /* QuickTraceiOSLoggerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickTraceiOSLoggerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		892E6540206B2C1800F83A84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		892E6541206B2C1800F83A84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		892E6543206B2C1800F83A84 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		892E6544206B2C1800F83A84 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		892E6547206B2C1800F83A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		892E6549206B2C1800F83A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		892E654C206B2C1800F83A84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		892E654E206B2C1800F83A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		892E654F206B2C1800F83A84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		892E6556206B30CA00F83A84 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		892E653A206B2C1800F83A84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69E736EB7EA415657B5E929 /* Pods_QuickTraceiOSLoggerDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		892E6534206B2C1800F83A84 = {
+			isa = PBXGroup;
+			children = (
+				892E653F206B2C1800F83A84 /* QuickTraceiOSLoggerDemo */,
+				892E653E206B2C1800F83A84 /* Products */,
+				C2C44EB34865D2D3D5FB73C3 /* Pods */,
+				AE0133C209172F7900358FCC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		892E653E206B2C1800F83A84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				892E653D206B2C1800F83A84 /* QuickTraceiOSLoggerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		892E653F206B2C1800F83A84 /* QuickTraceiOSLoggerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				892E6540206B2C1800F83A84 /* AppDelegate.h */,
+				892E6541206B2C1800F83A84 /* AppDelegate.m */,
+				892E6543206B2C1800F83A84 /* ViewController.h */,
+				892E6544206B2C1800F83A84 /* ViewController.m */,
+				892E6546206B2C1800F83A84 /* Main.storyboard */,
+				892E6549206B2C1800F83A84 /* Assets.xcassets */,
+				892E654B206B2C1800F83A84 /* LaunchScreen.storyboard */,
+				892E654E206B2C1800F83A84 /* Info.plist */,
+				892E654F206B2C1800F83A84 /* main.m */,
+				892E6556206B30CA00F83A84 /* InfoPlist.strings */,
+			);
+			path = QuickTraceiOSLoggerDemo;
+			sourceTree = "<group>";
+		};
+		AE0133C209172F7900358FCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E3F5DA30BFF7790E7F01252 /* Pods_QuickTraceiOSLoggerDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2C44EB34865D2D3D5FB73C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CC6614BA557EB7441B23633 /* Pods-QuickTraceiOSLoggerDemo.debug.xcconfig */,
+				3092554B0CC2E957EAA29E4D /* Pods-QuickTraceiOSLoggerDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		892E653C206B2C1800F83A84 /* QuickTraceiOSLoggerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 892E6553206B2C1800F83A84 /* Build configuration list for PBXNativeTarget "QuickTraceiOSLoggerDemo" */;
+			buildPhases = (
+				C45931EC3B16B0A7F0CAB56B /* [CP] Check Pods Manifest.lock */,
+				892E6539206B2C1800F83A84 /* Sources */,
+				892E653A206B2C1800F83A84 /* Frameworks */,
+				892E653B206B2C1800F83A84 /* Resources */,
+				AD9527EFAE84639339DD694A /* [CP] Embed Pods Frameworks */,
+				761AC25CC4F0DF086620137A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickTraceiOSLoggerDemo;
+			productName = QuickTraceiOSLoggerDemo;
+			productReference = 892E653D206B2C1800F83A84 /* QuickTraceiOSLoggerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		892E6535206B2C1800F83A84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Zero Status";
+				TargetAttributes = {
+					892E653C206B2C1800F83A84 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 892E6538206B2C1800F83A84 /* Build configuration list for PBXProject "QuickTraceiOSLoggerDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 892E6534206B2C1800F83A84;
+			productRefGroup = 892E653E206B2C1800F83A84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				892E653C206B2C1800F83A84 /* QuickTraceiOSLoggerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		892E653B206B2C1800F83A84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				892E654D206B2C1800F83A84 /* LaunchScreen.storyboard in Resources */,
+				892E6557206B30CA00F83A84 /* InfoPlist.strings in Resources */,
+				892E654A206B2C1800F83A84 /* Assets.xcassets in Resources */,
+				892E6548206B2C1800F83A84 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		761AC25CC4F0DF086620137A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD9527EFAE84639339DD694A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/QuickTraceiOSLogger/QuickTraceiOSLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/XLFacility/XLFacility.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickTraceiOSLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLFacility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C45931EC3B16B0A7F0CAB56B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickTraceiOSLoggerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		892E6539206B2C1800F83A84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				892E6545206B2C1800F83A84 /* ViewController.m in Sources */,
+				892E6550206B2C1800F83A84 /* main.m in Sources */,
+				892E6542206B2C1800F83A84 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		892E6546206B2C1800F83A84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				892E6547206B2C1800F83A84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		892E654B206B2C1800F83A84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				892E654C206B2C1800F83A84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		892E6551206B2C1800F83A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		892E6552206B2C1800F83A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		892E6554206B2C1800F83A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CC6614BA557EB7441B23633 /* Pods-QuickTraceiOSLoggerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuickTraceiOSLoggerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lessney.QuickTraceiOSLoggerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		892E6555206B2C1800F83A84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3092554B0CC2E957EAA29E4D /* Pods-QuickTraceiOSLoggerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QuickTraceiOSLoggerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lessney.QuickTraceiOSLoggerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		892E6538206B2C1800F83A84 /* Build configuration list for PBXProject "QuickTraceiOSLoggerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				892E6551206B2C1800F83A84 /* Debug */,
+				892E6552206B2C1800F83A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		892E6553206B2C1800F83A84 /* Build configuration list for PBXNativeTarget "QuickTraceiOSLoggerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				892E6554206B2C1800F83A84 /* Debug */,
+				892E6555206B2C1800F83A84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 892E6535206B2C1800F83A84 /* Project object */;
+}
