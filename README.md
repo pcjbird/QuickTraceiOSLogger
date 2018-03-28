@@ -34,10 +34,10 @@ pod 'QuickTraceiOSLogger'
   #import <QuickTraceiOSLogger/QuickTraceiOSLogger.h>
   
   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
-  [QuickiOSLogServer start];
-  XLOG_INFO(@"您正在使用 iOS 远程日志查看服务！");
-  return YES;
+        // Override point for customization after application launch.
+        [QuickiOSLogServer start];
+        XLOG_INFO(@"您正在使用 iOS 远程日志查看服务！");
+        return YES;
   }
   ```
 
