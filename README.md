@@ -19,6 +19,7 @@
 ## 演示 / Demo
 
 <p align="center"><img src="demo.jpg" title="demo"></p>
+[![demo](demo.jpg)](demo.jpg)
 
 ##  安装 / Installation
 
