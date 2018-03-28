@@ -32,6 +32,7 @@ pod 'QuickTraceiOSLogger'
   
 ```
   #import <QuickTraceiOSLogger/QuickTraceiOSLogger.h> 
+  
   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         // Override point for customization after application launch.
         [QuickiOSLogServer start];
