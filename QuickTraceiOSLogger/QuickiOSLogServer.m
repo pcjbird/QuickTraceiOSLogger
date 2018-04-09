@@ -11,6 +11,7 @@
 #import <XLFacility/XLTelnetServerLogger.h>
 #import "QuickiOSHttpServerLogger.h"
 #import <XLFacility/XLFacilityMacros.h>
+#import <XLFacility/XLStandardLogger.h>
 
 @interface QuickiOSLogServer ()
 
@@ -84,7 +85,8 @@ static QuickiOSLogServer *_sharedServer = nil;
 }
 - (void)startServer
 {
-    
+    [[XLStandardLogger sharedOutputLogger] setFormat:XLLoggerFormatString_NSLog];
+    [[XLStandardLogger sharedErrorLogger] setFormat:XLLoggerFormatString_NSLog];
     [XLSharedFacility addLogger:[QuickiOSLogServer sharedServer].telnetServerLogger];
     [XLSharedFacility addLogger:[QuickiOSLogServer sharedServer].httpServerLogger];
     XLSharedFacility.minLogLevel = kXLLogLevel_Info;

@@ -110,7 +110,6 @@
 				892E653A206B2C1800F83A84 /* Frameworks */,
 				892E653B206B2C1800F83A84 /* Resources */,
 				AD9527EFAE84639339DD694A /* [CP] Embed Pods Frameworks */,
-				761AC25CC4F0DF086620137A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,21 +168,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		761AC25CC4F0DF086620137A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AD9527EFAE84639339DD694A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
