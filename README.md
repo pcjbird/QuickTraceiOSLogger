@@ -4,7 +4,10 @@
 [![Pod Platform](http://img.shields.io/cocoapods/p/QuickTraceiOSLogger.svg?style=flat)](http://cocoadocs.org/docsets/QuickTraceiOSLogger/)
 [![Pod License](http://img.shields.io/cocoapods/l/QuickTraceiOSLogger.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![CocoaPods](https://img.shields.io/cocoapods/at/QuickTraceiOSLogger.svg)](https://github.com/pcjbird/QuickTraceiOSLogger)
+[![CocoaPods](https://img.shields.io/cocoapods/dt/QuickTraceiOSLogger.svg)](https://github.com/pcjbird/QuickTraceiOSLogger)
 [![GitHub release](https://img.shields.io/github/release/pcjbird/QuickTraceiOSLogger.svg)](https://github.com/pcjbird/QuickTraceiOSLogger/releases)
+[![GitHub release](https://img.shields.io/github/release-date/pcjbird/QuickTraceiOSLogger.svg)](https://github.com/pcjbird/QuickTraceiOSLogger/releases)
+[![Website](https://img.shields.io/website-pcjbird-down-green-red/https/shields.io.svg?label=author)](https://pcjbird.github.io)
 
 # QuickTraceiOSLogger
 
