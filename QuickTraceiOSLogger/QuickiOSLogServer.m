@@ -98,7 +98,7 @@ static QuickiOSLogServer *_sharedServer = nil;
 {
     if(_telnetServerLogger || _httpServerLogger)
     {
-        XLOG_INFO(@"[QuickTraceiOSLogger] 日志服务已停止。");
+        XLOG_INFO(@"[QuickTraceiOSLogger] 日志跟踪服务已停止。");
         [XLSharedFacility removeAllLoggers];
         _telnetServerLogger = nil;
         _httpServerLogger = nil;

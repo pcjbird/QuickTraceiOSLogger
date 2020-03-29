@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "QuickTraceiOSLogger"
-    s.version          = "1.0.6"
+    s.version          = "1.0.7"
     s.summary          = "A real time iOS log trace tool, view iOS log with pc web browser under local area network, which will automatically scroll like xcode. 一个实时的iOS日志跟踪工具，在局域网中使用 PC Web 浏览器查看 iOS 日志，它将像xcode一样自动滚动。"
     s.description      = <<-DESC
     A real time iOS log trace tool, view iOS log with pc web browser under local area network, which will automatically scroll like xcode. 一个实时的iOS日志跟踪工具，在局域网中使用 PC Web 浏览器查看 iOS 日志，它将像xcode一样自动滚动。
