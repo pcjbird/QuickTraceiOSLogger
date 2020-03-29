@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.license          = 'MIT'
     s.author           = {"pcjbird" => "pcjbird@hotmail.com"}
     s.source           = {:git => "https://github.com/pcjbird/QuickTraceiOSLogger.git", :tag => s.version.to_s}
-    s.social_media_url = 'http://www.lessney.com'
+    s.social_media_url = 'https://www.lessney.com'
     s.requires_arc     = true
     s.documentation_url = 'https://github.com/pcjbird/QuickTraceiOSLogger/blob/master/README.md'
     s.screenshot       = 'https://github.com/pcjbird/QuickTraceiOSLogger/blob/master/logo.png'
