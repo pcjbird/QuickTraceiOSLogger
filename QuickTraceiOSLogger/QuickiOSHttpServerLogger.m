@@ -109,21 +109,27 @@
                                                     backward:NO
                                                   maxRecords:0
                                                   usingBlock:^(int appVersion, XLLogRecord* record, BOOL* stop) {
-                                                      const char* style = "color: dimgray;";
-                                                      if (record.level == kXLLogLevel_Info) {
-                                                          style = "color: green;";
-                                                      } else if (record.level == kXLLogLevel_Warning) {
-                                                          style = "color: orange;";
-                                                      } else if (record.level == kXLLogLevel_Error) {
-                                                          style = "color: red;";
-                                                      } else if (record.level >= kXLLogLevel_Exception) {
-                                                          style = "color: red; font-weight: bold;";
-                                                      }
-                                                      NSString* formattedMessage = [logger formatRecord:record];
-                                                      [string appendFormat:@"<tr style=\"%s\">%@</tr>", style, formattedMessage];
-                                                      if (record.absoluteTime > maxTime) {
-                                                          maxTime = record.absoluteTime;
-                                                      }
+                                                    const char* style = "color: dimgray;";
+                                                    if (record.level == kXLLogLevel_Verbose){
+                                                        style = "color: #000000;";
+                                                    }
+                                                    else if (record.level == kXLLogLevel_Debug) {
+                                                        style = "color:#46C2F2;";
+                                                    }
+                                                    else if (record.level == kXLLogLevel_Info) {
+                                                      style = "color: green;";
+                                                    } else if (record.level == kXLLogLevel_Warning) {
+                                                      style = "color: orange;";
+                                                    } else if (record.level == kXLLogLevel_Error) {
+                                                      style = "color: red;";
+                                                    } else if (record.level >= kXLLogLevel_Exception) {
+                                                      style = "color: red; font-weight: bold;";
+                                                    }
+                                                    NSString* formattedMessage = [logger formatRecord:record];
+                                                    [string appendFormat:@"<tr style=\"%s\">%@</tr>", style, formattedMessage];
+                                                    if (record.absoluteTime > maxTime) {
+                                                      maxTime = record.absoluteTime;
+                                                    }
                                                   }];
     [string appendFormat:@"<tr id=\"maxTime\" data-value=\"%f\"></tr>", maxTime];
 }
