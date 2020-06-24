@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <QuickTraceiOSLogger/QuickTraceiOSLogger.h>
 
 @interface ViewController ()
 
+- (IBAction)OnStop:(id)sender;
 @end
 
 @implementation ViewController
@@ -26,4 +28,7 @@
 }
 
 
+- (IBAction)OnStop:(id)sender {
+    [QuickiOSLogServer stop];
+}
 @end

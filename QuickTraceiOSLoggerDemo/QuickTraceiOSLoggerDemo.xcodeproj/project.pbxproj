@@ -174,7 +174,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/QuickTraceiOSLogger/QuickTraceiOSLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/XLFacility/XLFacility.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
@@ -191,7 +191,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C45931EC3B16B0A7F0CAB56B /* [CP] Check Pods Manifest.lock */ = {
