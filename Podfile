@@ -7,7 +7,7 @@ project 'QuickTraceiOSLogger.xcodeproj'
 # 忽略引入库的所有警告（强迫症者的福音啊）
 inhibit_all_warnings!
 
-install! 'cocoapods', generate_multiple_pod_projects: true
+#install! 'cocoapods', generate_multiple_pod_projects: true
 
 source 'https://github.com/CocoaPods/Specs.git'
 
