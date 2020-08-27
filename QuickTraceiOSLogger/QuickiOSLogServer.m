@@ -8,14 +8,12 @@
 
 #import "QuickiOSLogServer.h"
 #import <XLFacility/XLFacility.h>
-#import <XLFacility/XLTelnetServerLogger.h>
 #import "QuickiOSHttpServerLogger.h"
 #import <XLFacility/XLFacilityMacros.h>
 #import <XLFacility/XLStandardLogger.h>
 
 @interface QuickiOSLogServer ()
 
-@property (nonatomic, strong) XLTelnetServerLogger *telnetServerLogger;
 @property (nonatomic, strong) QuickiOSHttpServerLogger *httpServerLogger;
 
 @end
@@ -64,16 +62,6 @@ static QuickiOSLogServer *_sharedServer = nil;
     [[QuickiOSLogServer sharedServer] stopServer];
 }
 
--(XLTelnetServerLogger *)telnetServerLogger
-{
-    if (!_telnetServerLogger)
-    {
-        _telnetServerLogger = [[XLTelnetServerLogger alloc] init];
-        _telnetServerLogger.format = @"<td>%d %P[%p:%r] %m%c</td>";
-    }
-    return _telnetServerLogger;
-}
-
 -(QuickiOSHttpServerLogger *)httpServerLogger
 {
     if (!_httpServerLogger)
@@ -87,17 +75,15 @@ static QuickiOSLogServer *_sharedServer = nil;
 {
     [[XLStandardLogger sharedOutputLogger] setFormat:XLLoggerFormatString_NSLog];
     [[XLStandardLogger sharedErrorLogger] setFormat:XLLoggerFormatString_NSLog];
-    [XLSharedFacility addLogger:[QuickiOSLogServer sharedServer].telnetServerLogger];
     [XLSharedFacility addLogger:[QuickiOSLogServer sharedServer].httpServerLogger];
     XLSharedFacility.minLogLevel = kXLLogLevel_Info;
-    XLOG_INFO(@"[QuickTraceiOSLogger] 您可以在 PC 控制台中使用 telnet %@ %lu 监听日志。", GCDTCPServerGetPrimaryIPAddress(false), (unsigned long)[QuickiOSLogServer sharedServer].telnetServerLogger.TCPServer.port);
     XLOG_INFO(@"[QuickTraceiOSLogger] 请在您的 PC 浏览器中打开 http://%@:%lu 浏览日志。", GCDTCPServerGetPrimaryIPAddress(false),(unsigned long)[QuickiOSLogServer sharedServer].httpServerLogger.TCPServer.port);
 }
 
 - (void)stopServer
 {
     @try {
-        if(_telnetServerLogger || _httpServerLogger)
+        if(_httpServerLogger)
         {
             XLOG_INFO(@"[QuickTraceiOSLogger] 日志跟踪服务已停止。");
             [XLSharedFacility removeAllLoggers];
@@ -105,7 +91,6 @@ static QuickiOSLogServer *_sharedServer = nil;
     } @catch (NSException *exception) {
         NSLog(@"[QuickTraceiOSLogger] 停止日志跟踪服务发生异常:【%@】%@, 原因:%@。", exception.name, exception.description, exception.reason);
     } @finally {
-        _telnetServerLogger = nil;
         _httpServerLogger = nil;
     }
     
