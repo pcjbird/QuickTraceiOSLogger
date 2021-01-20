@@ -86,6 +86,7 @@ static QuickiOSLogServer *_sharedServer = nil;
         if(_httpServerLogger)
         {
             XLOG_INFO(@"[QuickTraceiOSLogger] 日志跟踪服务已停止。");
+            [_httpServerLogger close];
             [XLSharedFacility removeAllLoggers];
         }
     } @catch (NSException *exception) {
