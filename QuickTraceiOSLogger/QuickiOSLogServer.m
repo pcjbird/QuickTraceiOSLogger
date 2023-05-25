@@ -67,6 +67,7 @@ static QuickiOSLogServer *_sharedServer = nil;
     if (!_httpServerLogger)
     {
         _httpServerLogger = [[QuickiOSHttpServerLogger alloc] initWithPort:8080];
+        _httpServerLogger.TCPServer.suspendInBackground = YES;
         _httpServerLogger.format = @"<td>%d %P[%p:%r] %m%c</td>";
     }
     return _httpServerLogger;
