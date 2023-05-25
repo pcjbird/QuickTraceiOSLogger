@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     s.documentation_url = 'https://github.com/pcjbird/QuickTraceiOSLogger/blob/master/README.md'
     s.screenshot       = 'https://github.com/pcjbird/QuickTraceiOSLogger/blob/master/logo.png'
 
-    s.platform         = :ios, '8.0'
+    s.platform         = :ios, '9.0'
     s.frameworks       = 'Foundation', 'UIKit'
 #s.preserve_paths   = ''
     s.source_files     = 'QuickTraceiOSLogger/*.{h,m}'
