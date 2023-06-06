@@ -14,6 +14,7 @@
 #import <XLFacility/XLFacilityMacros.h>
 #import <UIKit/UIKit.h>
 #import <YYWebImage/YYWebImage.h>
+#import "QuickiOSLogServerOption.h"
 
 #define APP_NAME ([[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"] ? [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"]:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])
 #define APP_VERSION ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
@@ -179,18 +180,19 @@
              </style>"];
             [string appendFormat:@"<script type=\"text/javascript\">\n\
              var refreshDelay = %i;\n\
+             var suspendInBackground = %i; \n\
              var footerElement = null;\n\
              function updateTimestamp() {\n\
              var now = new Date();\n\
              footerElement.innerHTML = \"Last updated on \" + now.toLocaleDateString() + \" \" + now.toLocaleTimeString();\n\
              }\n\
-             function refresh() {\n\
+             function refresh(force = false) {\n\
              var timeElement = document.getElementById(\"maxTime\");\n\
              var maxTime = timeElement.getAttribute(\"data-value\");\n\
              timeElement.parentNode.removeChild(timeElement);\n\
              \n\
              var xmlhttp = new XMLHttpRequest();\n\
-             xmlhttp.onreadystatechange = function() {\n\
+             xmlhttp.onreadystatechange = () => {\n\
              if (xmlhttp.readyState == 4) {\n\
              if (xmlhttp.status == 200) {\n\
              var contentElement = document.getElementById(\"content\");\n\
@@ -198,11 +200,17 @@
              updateTimestamp();\n\
              setTimeout(refresh, refreshDelay);\n\
              } else {\n\
+             var contentElement = document.getElementById(\"content\");\n\
+             var timeEle = \"<tr id=\" + \"\'\" + \"maxTime\" + \"\'\" +\" data-value=\" + maxTime + \"></tr>\"; \n\
+             contentElement.innerHTML = contentElement.innerHTML + timeEle;\n\
              footerElement.innerHTML = \"<span class=\\\"error\\\">Connection failed! Reload page to try again.</span>\";\n\
+             if (suspendInBackground > 0) { \n\
+               setTimeout(refresh(true), refreshDelay);\n\
              }\n\
              }\n\
              }\n\
-             xmlhttp.open(\"GET\", \"/log?after=\" + maxTime, true);\n\
+             }\n\
+             xmlhttp.open(\"GET\", \"/log?after=\" + maxTime +\"&force=\" + force, true);\n\
              xmlhttp.send();\n\
              }\n\
              window.onload = function() {\n\
@@ -211,7 +219,7 @@
              setTimeout(refresh, refreshDelay);\n\
              }\n\
              </script>",
-             kDefaultMinRefreshDelay];
+             kDefaultMinRefreshDelay, [QuickiOSLogServerOption sharedOption].suspendInBackground ? 1 : 0];
             [string appendString:@"</head>"];
             [string appendString:@"<body>"];
             [string appendFormat:@"<div style=\"padding-bottom: 9px;margin: 40px 0 20px;border-bottom: 1px solid #eee;text-align:center;\"><h1>%@ V%@ Build%@ 日志跟踪 (%s[%i])</h1></div>", APP_NAME, APP_VERSION, APP_BUILD, getprogname(), getpid()];
@@ -238,10 +246,26 @@
         }
         else if ([path isEqualToString:@"/log"] && [query hasPrefix:@"after="]) {
             NSMutableString* string = [[NSMutableString alloc] init];
-            CFAbsoluteTime time = [[query substringFromIndex:6] doubleValue];
+            CFAbsoluteTime time = 0;
+            BOOL force = NO;
+            NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:YES];
+            NSArray *queryItems = components.queryItems;
+            for (NSURLQueryItem *item in queryItems) {
+                //NSLog(@"%@ = %@", item.name, item.value);
+                if([item.name isEqualToString:@"after"])
+                {
+                    time = [item.value doubleValue];
+                }
+                else if([item.name isEqualToString:@"force"])
+                {
+                    force = [item.value boolValue];
+                }
+            }
+            
+            NSInteger seconds = force ? [QuickiOSLogServerOption sharedOption].offlineDetectInterval : kMaxLongPollDuration;
             
             _pollingSemaphore = dispatch_semaphore_create(0);
-            dispatch_semaphore_wait(_pollingSemaphore, dispatch_time(DISPATCH_TIME_NOW, kMaxLongPollDuration * NSEC_PER_SEC));
+            dispatch_semaphore_wait(_pollingSemaphore, dispatch_time(DISPATCH_TIME_NOW, seconds * NSEC_PER_SEC));
             if (self.peer) {  // Check for race-condition if the connection was closed while waiting
                 [self _appendLogRecordsToString:string afterAbsoluteTime:time];
                 success = [self _writeHTTPResponseWithStatusCode:200 htmlBody:string];

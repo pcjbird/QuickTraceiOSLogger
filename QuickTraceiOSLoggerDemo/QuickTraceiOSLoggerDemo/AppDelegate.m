@@ -19,6 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [QuickiOSLogServer start];
+    //[QuickiOSLogServer start:YES offlineDetectIntervalInSeconds:0];
     XLOG_INFO(@"您正在使用 iOS 远程日志查看服务！");
     return YES;
 }

@@ -11,6 +11,7 @@
 #import "QuickiOSHttpServerLogger.h"
 #import <XLFacility/XLFacilityMacros.h>
 #import <XLFacility/XLStandardLogger.h>
+#import "QuickiOSLogServerOption.h"
 
 @interface QuickiOSLogServer ()
 
@@ -57,6 +58,19 @@ static QuickiOSLogServer *_sharedServer = nil;
     [[QuickiOSLogServer sharedServer] startServer];
 }
 
+
+/**
+ *@brief 启动服务器
+ *@param suspendInBackground 是否在后台挂起
+ *@param offlineDetectInterval 离线检测间隔时间，单位：秒，默认30s
+ */
++ (void) start:(BOOL)suspendInBackground offlineDetectIntervalInSeconds:(NSInteger)offlineDetectInterval
+{
+    [QuickiOSLogServerOption sharedOption].suspendInBackground = suspendInBackground;
+    [QuickiOSLogServerOption sharedOption].offlineDetectInterval = offlineDetectInterval;
+    [[QuickiOSLogServer sharedServer] startServer];
+}
+
 +(void)stop
 {
     [[QuickiOSLogServer sharedServer] stopServer];
@@ -67,7 +81,8 @@ static QuickiOSLogServer *_sharedServer = nil;
     if (!_httpServerLogger)
     {
         _httpServerLogger = [[QuickiOSHttpServerLogger alloc] initWithPort:8080];
-        _httpServerLogger.TCPServer.suspendInBackground = YES;
+        _httpServerLogger.TCPServer.suspendInBackground = [QuickiOSLogServerOption sharedOption].suspendInBackground;
+        
         _httpServerLogger.format = @"<td>%d %P[%p:%r] %m%c</td>";
     }
     return _httpServerLogger;

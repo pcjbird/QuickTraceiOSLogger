@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		843DB61AF9AACA1200679AA1 /* libPods-QuickTraceiOSLoggerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BD6ACB87BD1371850B902A /* libPods-QuickTraceiOSLoggerDemo.a */; };
 		892E6542206B2C1800F83A84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E6541206B2C1800F83A84 /* AppDelegate.m */; };
 		892E6545206B2C1800F83A84 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E6544206B2C1800F83A84 /* ViewController.m */; };
 		892E6548206B2C1800F83A84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892E6546206B2C1800F83A84 /* Main.storyboard */; };
@@ -14,13 +15,12 @@
 		892E654D206B2C1800F83A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892E654B206B2C1800F83A84 /* LaunchScreen.storyboard */; };
 		892E6550206B2C1800F83A84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 892E654F206B2C1800F83A84 /* main.m */; };
 		892E6557206B30CA00F83A84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 892E6556206B30CA00F83A84 /* InfoPlist.strings */; };
-		B69E736EB7EA415657B5E929 /* Pods_QuickTraceiOSLoggerDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3F5DA30BFF7790E7F01252 /* Pods_QuickTraceiOSLoggerDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CC6614BA557EB7441B23633 /* Pods-QuickTraceiOSLoggerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickTraceiOSLoggerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3092554B0CC2E957EAA29E4D /* Pods-QuickTraceiOSLoggerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickTraceiOSLoggerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo.release.xcconfig"; sourceTree = "<group>"; };
-		3E3F5DA30BFF7790E7F01252 /* Pods_QuickTraceiOSLoggerDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickTraceiOSLoggerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38BD6ACB87BD1371850B902A /* libPods-QuickTraceiOSLoggerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickTraceiOSLoggerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		892E653D206B2C1800F83A84 /* QuickTraceiOSLoggerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickTraceiOSLoggerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		892E6540206B2C1800F83A84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		892E6541206B2C1800F83A84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B69E736EB7EA415657B5E929 /* Pods_QuickTraceiOSLoggerDemo.framework in Frameworks */,
+				843DB61AF9AACA1200679AA1 /* libPods-QuickTraceiOSLoggerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +84,7 @@
 		AE0133C209172F7900358FCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3E3F5DA30BFF7790E7F01252 /* Pods_QuickTraceiOSLoggerDemo.framework */,
+				38BD6ACB87BD1371850B902A /* libPods-QuickTraceiOSLoggerDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,7 +109,6 @@
 				892E6539206B2C1800F83A84 /* Sources */,
 				892E653A206B2C1800F83A84 /* Frameworks */,
 				892E653B206B2C1800F83A84 /* Resources */,
-				AD9527EFAE84639339DD694A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,32 +167,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AD9527EFAE84639339DD694A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/QuickTraceiOSLogger/QuickTraceiOSLogger.framework",
-				"${BUILT_PRODUCTS_DIR}/XLFacility/XLFacility.framework",
-				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
-				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
-				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickTraceiOSLogger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLFacility.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickTraceiOSLoggerDemo/Pods-QuickTraceiOSLoggerDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C45931EC3B16B0A7F0CAB56B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
