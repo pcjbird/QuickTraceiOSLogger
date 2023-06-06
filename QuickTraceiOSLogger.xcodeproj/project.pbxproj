@@ -26,6 +26,8 @@
 		89874AB6206354C900D750ED /* QuickiOSLogServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89874AB4206354C900D750ED /* QuickiOSLogServer.m */; };
 		89874ABE20638AAD00D750ED /* QuickiOSHttpServerLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 89874ABC20638AAD00D750ED /* QuickiOSHttpServerLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89874ABF20638AAD00D750ED /* QuickiOSHttpServerLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 89874ABD20638AAD00D750ED /* QuickiOSHttpServerLogger.m */; };
+		899120AB2A2F26B6001A152E /* QuickiOSLogServerOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 899120A92A2F26B6001A152E /* QuickiOSLogServerOption.h */; };
+		899120AC2A2F26B6001A152E /* QuickiOSLogServerOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 899120AA2A2F26B6001A152E /* QuickiOSLogServerOption.m */; };
 		E0AEEBA693AE291E17FDAB7D /* Pods_QuickTraceiOSLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D92400D026F19C786222BF /* Pods_QuickTraceiOSLogger.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		89874AB4206354C900D750ED /* QuickiOSLogServer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickiOSLogServer.m; sourceTree = "<group>"; };
 		89874ABC20638AAD00D750ED /* QuickiOSHttpServerLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickiOSHttpServerLogger.h; sourceTree = "<group>"; };
 		89874ABD20638AAD00D750ED /* QuickiOSHttpServerLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickiOSHttpServerLogger.m; sourceTree = "<group>"; };
+		899120A92A2F26B6001A152E /* QuickiOSLogServerOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickiOSLogServerOption.h; sourceTree = "<group>"; };
+		899120AA2A2F26B6001A152E /* QuickiOSLogServerOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickiOSLogServerOption.m; sourceTree = "<group>"; };
 		8D983CE262AEEB6ECADC59D0 /* Pods-QuickTraceiOSLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickTraceiOSLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickTraceiOSLogger/Pods-QuickTraceiOSLogger.release.xcconfig"; sourceTree = "<group>"; };
 		C960719CEDFE94A2AE880D6A /* Pods-QuickTraceiOSLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickTraceiOSLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickTraceiOSLogger/Pods-QuickTraceiOSLogger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +100,8 @@
 		89874A9720634DB600D750ED /* QuickTraceiOSLogger */ = {
 			isa = PBXGroup;
 			children = (
+				899120A92A2F26B6001A152E /* QuickiOSLogServerOption.h */,
+				899120AA2A2F26B6001A152E /* QuickiOSLogServerOption.m */,
 				89874A9820634DB600D750ED /* QuickTraceiOSLogger.h */,
 				89874AB3206354C900D750ED /* QuickiOSLogServer.h */,
 				89874AB4206354C900D750ED /* QuickiOSLogServer.m */,
@@ -124,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89874A9A20634DB600D750ED /* QuickTraceiOSLogger.h in Headers */,
+				899120AB2A2F26B6001A152E /* QuickiOSLogServerOption.h in Headers */,
 				89874ABE20638AAD00D750ED /* QuickiOSHttpServerLogger.h in Headers */,
 				89874AB5206354C900D750ED /* QuickiOSLogServer.h in Headers */,
 			);
@@ -237,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899120AC2A2F26B6001A152E /* QuickiOSLogServerOption.m in Sources */,
 				89874ABF20638AAD00D750ED /* QuickiOSHttpServerLogger.m in Sources */,
 				89874AB6206354C900D750ED /* QuickiOSLogServer.m in Sources */,
 			);
