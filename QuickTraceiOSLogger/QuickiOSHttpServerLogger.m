@@ -262,8 +262,8 @@
 - (void)_readHeaders {
     [self readDataAsynchronously:^(NSData* data) {
         if (data) {
-            [_headerData appendData:data];
-            NSRange range = [_headerData rangeOfData:[NSData dataWithBytes:"\r\n\r\n" length:4] options:0 range:NSMakeRange(0, _headerData.length)];
+            [self->_headerData appendData:data];
+            NSRange range = [self->_headerData rangeOfData:[NSData dataWithBytes:"\r\n\r\n" length:4] options:0 range:NSMakeRange(0, self->_headerData.length)];
             if (range.location != NSNotFound) {
                 BOOL success = NO;
                 CFHTTPMessageRef message = CFHTTPMessageCreateEmpty(kCFAllocatorDefault, true);
