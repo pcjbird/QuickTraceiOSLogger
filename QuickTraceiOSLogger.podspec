@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
     s.source_files     = 'QuickTraceiOSLogger/*.{h,m}'
     s.public_header_files = 'QuickTraceiOSLogger/QuickTraceiOSLogger.h', 'QuickTraceiOSLogger/QuickiOSLogServer.h', 'QuickTraceiOSLogger/QuickiOSHttpServerLogger.h'
 
-    s.dependency 'XLFacility'
+    s.dependency 'XLFacility', :git => 'https://github.com/pcjbird/XLFacility.git'
     s.dependency 'YYWebImage'
 
     s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
