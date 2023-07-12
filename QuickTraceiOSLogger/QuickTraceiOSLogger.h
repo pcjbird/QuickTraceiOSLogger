@@ -56,7 +56,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <XLFacility/XLFacilityMacros.h>
+#import <XLFacility_optimize/XLFacilityMacros.h>
 //! Project version number for QuickTraceiOSLogger.
 FOUNDATION_EXPORT double QuickTraceiOSLoggerVersionNumber;
 
