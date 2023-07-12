@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Zero Status. All rights reserved.
 //
 
-#import <XLFacility/XLHTTPServerLogger.h>
+#import <XLFacility_optimize/XLHTTPServerLogger.h>
 
 @interface QuickiOSHttpServerLogger : XLHTTPServerLogger
 

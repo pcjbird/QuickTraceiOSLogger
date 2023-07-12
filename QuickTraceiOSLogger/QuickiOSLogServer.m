@@ -7,10 +7,10 @@
 //
 
 #import "QuickiOSLogServer.h"
-#import <XLFacility/XLFacility.h>
+#import <XLFacility_optimize/XLFacility.h>
 #import "QuickiOSHttpServerLogger.h"
-#import <XLFacility/XLFacilityMacros.h>
-#import <XLFacility/XLStandardLogger.h>
+#import <XLFacility_optimize/XLFacilityMacros.h>
+#import <XLFacility_optimize/XLStandardLogger.h>
 #import "QuickiOSLogServerOption.h"
 
 @interface QuickiOSLogServer ()

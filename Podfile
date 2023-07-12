@@ -16,6 +16,6 @@ target 'QuickTraceiOSLogger' do
   use_frameworks!
 
   # Pods for QuickTraceiOSLogger
-  pod 'XLFacility'
+  pod 'XLFacility.optimize'
   pod 'YYWebImage'
 end

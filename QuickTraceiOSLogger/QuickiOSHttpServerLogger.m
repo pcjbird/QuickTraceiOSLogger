@@ -10,8 +10,8 @@
 #endif
 
 #import "QuickiOSHttpServerLogger.h"
-#import <XLFacility/XLFunctions.h>
-#import <XLFacility/XLFacilityMacros.h>
+#import <XLFacility_optimize/XLFunctions.h>
+#import <XLFacility_optimize/XLFacilityMacros.h>
 #import <UIKit/UIKit.h>
 #import <YYWebImage/YYWebImage.h>
 #import "QuickiOSLogServerOption.h"
