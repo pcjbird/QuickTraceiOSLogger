@@ -100,9 +100,9 @@
 		89874A9720634DB600D750ED /* QuickTraceiOSLogger */ = {
 			isa = PBXGroup;
 			children = (
+				89874A9820634DB600D750ED /* QuickTraceiOSLogger.h */,
 				899120A92A2F26B6001A152E /* QuickiOSLogServerOption.h */,
 				899120AA2A2F26B6001A152E /* QuickiOSLogServerOption.m */,
-				89874A9820634DB600D750ED /* QuickTraceiOSLogger.h */,
 				89874AB3206354C900D750ED /* QuickiOSLogServer.h */,
 				89874AB4206354C900D750ED /* QuickiOSLogServer.m */,
 				89874ABC20638AAD00D750ED /* QuickiOSHttpServerLogger.h */,
@@ -369,7 +369,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202305250001;
+				CURRENT_PROJECT_VERSION = 202307130001;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -378,7 +378,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.6;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -398,7 +398,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 202305250001;
+				CURRENT_PROJECT_VERSION = 202307130001;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -407,7 +407,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.0.6;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
