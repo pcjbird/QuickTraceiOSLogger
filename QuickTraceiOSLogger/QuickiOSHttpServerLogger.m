@@ -10,13 +10,13 @@
 #endif
 
 #import "QuickiOSHttpServerLogger.h"
-#if __has_include(<XLFacility_optimize/XLFunctions.h>)
-#import <XLFacility_optimize/XLFunctions.h>
+#if __has_include(<XLFacility/XLFunctions.h>)
+#import <XLFacility/XLFunctions.h>
 #else
 #import "XLFunctions.h"
 #endif
-#if __has_include(<XLFacility_optimize/XLFacilityMacros.h>)
-#import <XLFacility_optimize/XLFacilityMacros.h>
+#if __has_include(<XLFacility/XLFacilityMacros.h>)
+#import <XLFacility/XLFacilityMacros.h>
 #else
 #import "XLFacilityMacros.h"
 #endif

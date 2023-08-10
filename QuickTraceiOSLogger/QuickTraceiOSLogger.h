@@ -59,8 +59,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#if __has_include(<XLFacility_optimize/XLFacilityMacros.h>)
-#import <XLFacility_optimize/XLFacilityMacros.h>
+#if __has_include(<XLFacility/XLFacilityMacros.h>)
+#import <XLFacility/XLFacilityMacros.h>
 #else
 #import "XLFacilityMacros.h"
 #endif

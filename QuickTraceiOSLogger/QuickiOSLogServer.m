@@ -7,19 +7,19 @@
 //
 
 #import "QuickiOSLogServer.h"
-#if __has_include(<XLFacility_optimize/XLFacility.h>)
-#import <XLFacility_optimize/XLFacility.h>
+#if __has_include(<XLFacility/XLFacility.h>)
+#import <XLFacility/XLFacility.h>
 #else
 #import "XLFacility.h"
 #endif
 #import "QuickiOSHttpServerLogger.h"
-#if __has_include(<XLFacility_optimize/XLFacilityMacros.h>)
-#import <XLFacility_optimize/XLFacilityMacros.h>
+#if __has_include(<XLFacility/XLFacilityMacros.h>)
+#import <XLFacility/XLFacilityMacros.h>
 #else
 #import "XLFacilityMacros.h"
 #endif
-#if __has_include(<XLFacility_optimize/XLStandardLogger.h>)
-#import <XLFacility_optimize/XLStandardLogger.h>
+#if __has_include(<XLFacility/XLStandardLogger.h>)
+#import <XLFacility/XLStandardLogger.h>
 #else
 #import "XLStandardLogger.h"
 #endif

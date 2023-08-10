@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		02CBFC6AC9FE2784FCEA1E4C /* Pods_QuickTraceiOSLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60A9C52C5BD651183485949 /* Pods_QuickTraceiOSLogger.framework */; };
 		89874A9A20634DB600D750ED /* QuickTraceiOSLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 89874A9820634DB600D750ED /* QuickTraceiOSLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89874AB5206354C900D750ED /* QuickiOSLogServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 89874AB3206354C900D750ED /* QuickiOSLogServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89874AB6206354C900D750ED /* QuickiOSLogServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89874AB4206354C900D750ED /* QuickiOSLogServer.m */; };
@@ -28,11 +29,9 @@
 		89874ABF20638AAD00D750ED /* QuickiOSHttpServerLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 89874ABD20638AAD00D750ED /* QuickiOSHttpServerLogger.m */; };
 		899120AB2A2F26B6001A152E /* QuickiOSLogServerOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 899120A92A2F26B6001A152E /* QuickiOSLogServerOption.h */; };
 		899120AC2A2F26B6001A152E /* QuickiOSLogServerOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 899120AA2A2F26B6001A152E /* QuickiOSLogServerOption.m */; };
-		E0AEEBA693AE291E17FDAB7D /* Pods_QuickTraceiOSLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D92400D026F19C786222BF /* Pods_QuickTraceiOSLogger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		79D92400D026F19C786222BF /* Pods_QuickTraceiOSLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickTraceiOSLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89874A9520634DB600D750ED /* QuickTraceiOSLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuickTraceiOSLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89874A9820634DB600D750ED /* QuickTraceiOSLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickTraceiOSLogger.h; sourceTree = "<group>"; };
 		89874A9920634DB600D750ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		899120A92A2F26B6001A152E /* QuickiOSLogServerOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickiOSLogServerOption.h; sourceTree = "<group>"; };
 		899120AA2A2F26B6001A152E /* QuickiOSLogServerOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickiOSLogServerOption.m; sourceTree = "<group>"; };
 		8D983CE262AEEB6ECADC59D0 /* Pods-QuickTraceiOSLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickTraceiOSLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickTraceiOSLogger/Pods-QuickTraceiOSLogger.release.xcconfig"; sourceTree = "<group>"; };
+		B60A9C52C5BD651183485949 /* Pods_QuickTraceiOSLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickTraceiOSLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C960719CEDFE94A2AE880D6A /* Pods-QuickTraceiOSLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickTraceiOSLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickTraceiOSLogger/Pods-QuickTraceiOSLogger.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0AEEBA693AE291E17FDAB7D /* Pods_QuickTraceiOSLogger.framework in Frameworks */,
+				02CBFC6AC9FE2784FCEA1E4C /* Pods_QuickTraceiOSLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +64,7 @@
 		5C04D6FE155C16005D8D69A9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				79D92400D026F19C786222BF /* Pods_QuickTraceiOSLogger.framework */,
+				B60A9C52C5BD651183485949 /* Pods_QuickTraceiOSLogger.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
