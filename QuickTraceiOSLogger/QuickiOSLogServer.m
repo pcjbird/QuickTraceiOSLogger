@@ -110,18 +110,22 @@ static QuickiOSLogServer *_sharedServer = nil;
 
 - (void)stopServer
 {
-    @try {
-        if(_httpServerLogger)
-        {
-            NSLog(@"[QuickTraceiOSLogger] 日志跟踪服务已停止。");
-            [_httpServerLogger close];
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        __strong typeof(self) strongSelf = weakSelf;
+        if(!strongSelf) return;
+        @try {
+            if(strongSelf.httpServerLogger)
+            {
+                NSLog(@"[QuickTraceiOSLogger] 日志跟踪服务已停止。");
+                [strongSelf.httpServerLogger close];
+            }
+        } @catch (NSException *exception) {
+            NSLog(@"[QuickTraceiOSLogger] 停止日志跟踪服务发生异常:【%@】%@, 原因:%@。", exception.name, exception.description, exception.reason);
+        } @finally {
+            strongSelf.httpServerLogger = nil;
         }
-    } @catch (NSException *exception) {
-        NSLog(@"[QuickTraceiOSLogger] 停止日志跟踪服务发生异常:【%@】%@, 原因:%@。", exception.name, exception.description, exception.reason);
-    } @finally {
-        _httpServerLogger = nil;
-    }
-    
+    });
 }
 
 @end
