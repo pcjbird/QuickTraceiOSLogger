@@ -8,6 +8,12 @@
 //  框架名称:QuickTraceiOSLogger
 //  框架功能:A real time iOS log trace tool, view iOS log with pc web browser under local area network, which will automatically scroll like xcode. 一个实时的iOS日志跟踪工具，在本地区域网络下使用 PC Web 浏览器查看 iOS 日志，它将像xcode一样自动滚动。
 //  修改记录:
+//     pcjbird    2024-08-15  Version:2.0.8 Build:20240815001
+//                            1.优化日志系统。
+//
+//     pcjbird    2023-08-10  Version:2.0.7 Build:202308100001
+//                            1.优化日志系统。
+//
 //     pcjbird    2023-07-13  Version:2.0.6 Build:202307130001
 //                            1.优化日志系统。
 //
